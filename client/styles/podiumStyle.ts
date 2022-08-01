@@ -120,6 +120,6 @@ export const Bar = styled.div`
   background-color: ${(props) => props.theme.colors.secondary};
   border-radius: 20px;
   top: 169px;
-  left: 400px;
+  left: 7px;
   z-index: 0;
 `

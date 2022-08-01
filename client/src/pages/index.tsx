@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Menu from '../components/Menu';
 import Podium from '../components/Podium';
+import Ranking from '../components/Ranking';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <Layout>
         <Menu />
         <Podium />
+        <Ranking />
       </Layout>
     </>
   );

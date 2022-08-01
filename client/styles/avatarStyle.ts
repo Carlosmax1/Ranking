@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export interface AvatarUserProps {
+  url: string;
+}
+
 export const Number1 = styled.div`
   display: flex;
   align-items: center;
@@ -78,4 +82,38 @@ export const Avatar3 = styled.div`
   background-color: #fff;
   border: 5px solid ${(props) => props.theme.colors.top3};
   margin-top: 3em;
+`
+
+export const AvatarUserContainer = styled.div`
+
+`
+
+export const AvatarUser = styled.div<AvatarUserProps>` 
+  background: url(${(props) => props.url});
+  background-position: center;
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin: 1em;
+`
+
+export const AvatarUsersContainerInfos = styled.div`
+  padding: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #5F5959;
+`
+
+export const Name = styled.span`
+  font-family: ${(props) => props.theme.font.family.default};
+  color: ${(props) => props.theme.colors.white};
+  font-weight: 600;
+`
+
+export const Points = styled.span`
+  font-family: ${(props) => props.theme.font.family.default};
+  color: ${(props) => props.theme.colors.white};
+  font-weight: 600;
 `

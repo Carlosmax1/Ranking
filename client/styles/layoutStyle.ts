@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Box = styled.main`
-  width: 100vw;
-  height: 100vh; 
-  background-color: ${(props) => props.theme.colors.primary};
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `

@@ -4,15 +4,28 @@ import {
   Avatar3,
   Number1,
   Number2,
-  Number3
+  Number3,
+  AvatarUserContainer,
+  AvatarUser,
+  AvatarUsersContainerInfos,
+  Name,
+  Points
 }
-from "../../styles/avatarStyle";
+  from "../../styles/avatarStyle";
+
+type AvatarUserProps = {
+  id: number;
+  name: string
+  url: string;
+  points: number;
+}
 
 type AvatarProps = {
-  variant: 'top1' | 'top2' | 'top3';
+  variant: 'top1' | 'top2' | 'top3' | 'user';
+  users?: AvatarUserProps[];
 }
 
-export default function Avatar({ variant }: AvatarProps) {
+export default function Avatar({ variant, users }: AvatarProps) {
 
   return (
     <>
@@ -30,6 +43,19 @@ export default function Avatar({ variant }: AvatarProps) {
         <Avatar3>
           <Number3>3</Number3>
         </Avatar3>
+      )}
+      {variant === 'user' && (
+        <AvatarUserContainer>
+          {users?.map((user) => (
+            <>
+              <AvatarUsersContainerInfos key={user.id} >
+                <AvatarUser url={user.url} />
+                <Name>{user.name}</Name>
+                <Points>{user.points}</Points>
+              </AvatarUsersContainerInfos>
+            </>
+          ))}
+        </AvatarUserContainer>
       )}
     </>
   );
