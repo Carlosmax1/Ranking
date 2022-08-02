@@ -5,6 +5,7 @@ const UserSchema: Schema = new Schema({
   name: { type: String, require: true },
   url: { type: String, require: false },
   points: { type: Number, require: true },
+  createDate: { type: String, require: true },
 });
 
 export const User = mongoose.model('User', UserSchema);
